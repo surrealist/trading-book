@@ -1,0 +1,14 @@
+<div class="mb-2">
+
+  <input type="number" min="1" max="100" step="2"
+         [(ngModel)]="step" class="mr-2" />
+
+  <button class="btn btn-outline-info btn-sm" on-click="dec()">Dec</button>
+  {{ n }}
+  <button class="btn btn-outline-info btn-sm" (click)="inc()">Inc</button>
+
+  <img src="{{ url }}" width="80" class="ml-2 rounded" />
+
+  <img [src]="url" width="80" class="ml-2 rounded-circle" />
+
+</div>

@@ -1,0 +1,20 @@
+<div>
+  <input [(ngModel)]="p.weightKg" type="number" style="width: 100px" />
+  <input [(ngModel)]="p.heightCm" type="number" style="width: 100px" />
+  {{ p.bmi() | number:'1.2-2' }}
+
+  <span [ngClass]="bmiCategoryClass(p)" class="px-1">
+    {{ p.bmiCategory() }}
+  </span>
+
+  <span
+    [class.text-success]="p.bmiCategory()==='Normal'"
+    [class.text-light]="p.bmiCategory()!=='Normal'"
+    [class.bg-danger]="p.bmiCategory()!=='Normal'">
+    {{ p.bmiCategory() }}
+  </span>
+
+  <button (click)="writeLog()">Write Log</button>
+</div>
+
+<!-- class="text-light bg-danger" -->
